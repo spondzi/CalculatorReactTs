@@ -1,0 +1,47 @@
+$hoverBreakpoint: 1025px;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border: 0;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: calc(25%);
+  height: calc(16.66%);
+  background-color: #ddd;
+  cursor: pointer;
+  font-size: 30px;
+  &:hover {
+    @media (min-width: $hoverBreakpoint) {
+      background-color: #aaa;
+    }
+  }
+
+  &:active {
+    background-color: #aaa;
+  }
+
+  &--is-lighter {
+    background-color: #eee;
+  }
+
+  &--is-memory {
+    padding: 10px 0;
+    font-size: 18px;
+    background-color: #ccc;
+    border: 0;
+    height: 100%;
+  }
+
+  &--is-equal {
+    background-color: #6d9dc3;
+
+    &:hover {
+      @media (min-width: $hoverBreakpoint) {
+        background-color: #4599dd;
+      }
+    }
+  }
+}
